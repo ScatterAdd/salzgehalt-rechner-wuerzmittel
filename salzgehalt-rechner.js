@@ -115,5 +115,3 @@ function importiereCSV(file) {
 function zeigeErgebnis(text) {
     document.getElementById('ergebnis').textContent = text;
 }
-
-// ...weitere Logik für Buttons und Event-Handler kann im HTML eingebunden werden...
