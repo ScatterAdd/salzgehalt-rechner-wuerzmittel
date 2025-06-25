@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salzgehalt-Rechner für Würzsaucen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"], input[type="number"] { width: 300px; padding: 5px; }
+        button { margin: 5px 2px; padding: 6px 16px; }
+        #ergebnis { margin-top: 20px; font-weight: bold; font-size: 1.2em; }
+        ul { margin-top: 20px; padding-left: 0; }
+        li { list-style: none; padding: 4px; border-bottom: 1px solid #ddd; cursor: pointer; }
+        li:hover { background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h2>Salzgehalt-Rechner für Würzsaucen<br />und Würzmischungen</h2>
+    <label for="name">Würzsauce / Würzmischung Name:</label>
+    <input type="text" id="name">
+
+    <label for="portionsgroesse">Packungsgröße, Max Inhalt (g/ml):</label>
+    <input type="text" id="portionsgroesse">
+
+    <label for="salzgehalt">Salzanteil (g/100g / g/100ml):</label>
+    <input type="text" id="salzgehalt">
+
+    <label for="menge">Portionsmenge (g/ml):</label>
+    <input type="text" id="menge">
+
+    <div style="margin-top:15px;">
+        <button onclick="eintragHinzufuegen(
+            document.getElementById('name').value,
+            document.getElementById('portionsgroesse').value,
+            document.getElementById('salzgehalt').value,
+            document.getElementById('menge').value
+        )">Hinzufügen</button>
+        <button onclick="if(aktuellAusgewaehlt!==null) eintragAktualisieren(
+            aktuellAusgewaehlt,
+            document.getElementById('name').value,
+            document.getElementById('portionsgroesse').value,
+            document.getElementById('salzgehalt').value,
+            document.getElementById('menge').value
+        )">Aktualisieren</button>
+        <button onclick="if(aktuellAusgewaehlt!==null) eintragLoeschen(aktuellAusgewaehlt)">Löschen</button>
+        <button onclick="clearEingaben()">Clear</button>
+        <button onclick="zeigeErgebnis('Ergebnis: ' + berechneSalz(document.getElementById('salzgehalt').value, document.getElementById('menge').value) + ' g Salz')">Berechnen</button>
+    </div>
+
+    <div id="ergebnis"></div>
+
+    <div style="margin-top:20px;">
+        <button onclick="exportiereCSV()">CSV Export</button>
+        <input type="file" id="csvimport" style="display:none" accept=".csv">
+        <button onclick="document.getElementById('csvimport').click()">CSV Import</button>
+    </div>
+
+    <ul id="sossenListe"></ul>
+
+    <script src="salzgehalt-rechner.js"></script>
+    <script>
+        // CSV Import-Handler
+        document.getElementById('csvimport').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                importiereCSV(e.target.files[0]);
+            }
+        });
+        // Initiale Anzeige
+        aktualisiereListe();
+    </script>
+</body>
+</html>
