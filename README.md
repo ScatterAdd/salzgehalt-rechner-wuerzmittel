@@ -1,5 +1,8 @@
 # Salzgehalt-Rechner für Würzmittel
 
+   This project is licensed under the GNU General Public License v3.0. See the 
+   LICENSE file for details.
+
 Die meisten industriell hergestellten oder selbst gemischten Würzmittel (wie Würzsaucen, Würzmischungen, Marinaden, Pasten etc.) enthalten einen bestimmten Anteil Salz. Für selbst hergestellte Speisen soll das Würzmittel portioniert werden, um einen zu hohen Salzgehalt in den Speisen zu vermeiden. 
 Die WHO warnt bei Erwachsenen davor, die tägliche Aufnahmemenge von 5g Salz zu überschreiten. 
 Dieses Script ist ein einfacher, lokal im Browser laufender Rechner zur Berechnung des Salzgehalts in Würzmitteln. Keine Installation, kein Server nötig – es reicht aus, die 4 Dateien "README.md", "LICENSE", "salzgehalt-rechner.js" und "salzrechner.html" in ein Verzeichnis eigener Wahl herunterzuladen.
@@ -19,5 +22,6 @@ Dieses Script ist ein einfacher, lokal im Browser laufender Rechner zur Berechnu
 - Es werden keine Daten ins Internet übertragen, alles bleibt lokal auf deinem Gerät.
 - Die App benötigt keine Installation und funktioniert offline.
 
-## Lizenz
-MIT-Lizenz, siehe LICENSE
+
+## License
+This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
