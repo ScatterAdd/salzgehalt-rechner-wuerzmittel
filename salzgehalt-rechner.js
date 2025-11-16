@@ -1,3 +1,5 @@
+// Copyright (c) 2025 ScatterAdd — MIT License (siehe LICENSE)
+
 // Datenstruktur für die Einträge
 let eintraege = [];
 let aktuellAusgewaehlt = null;
