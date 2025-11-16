@@ -1,7 +1,8 @@
 # Salzgehalt-Rechner für Würzmittel
 
-   This project is licensed under the GNU General Public License v3.0. See the 
-   LICENSE file for details.
+    Dieses Projekt steht unter der MIT‑Lizenz — siehe LICENSE.
+    Drittanbieter‑Bibliotheken und deren Lizenzen sind in THIRD_PARTY_NOTICES.md 
+    aufgeführt.
 
 Die meisten industriell hergestellten oder selbst gemischten Würzmittel (wie Würzsaucen, Würzmischungen, Marinaden, Pasten etc.) enthalten einen bestimmten Anteil Salz. Für selbst hergestellte Speisen soll das Würzmittel portioniert werden, um einen zu hohen Salzgehalt in den Speisen zu vermeiden. 
 Die WHO warnt bei Erwachsenen davor, die tägliche Aufnahmemenge von 5g Salz zu überschreiten. 
