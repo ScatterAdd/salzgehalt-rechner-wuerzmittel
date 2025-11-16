@@ -22,7 +22,3 @@ Dieses Script ist ein einfacher, lokal im Browser laufender Rechner zur Berechnu
 ## Hinweise
 - Es werden keine Daten ins Internet übertragen, alles bleibt lokal auf deinem Gerät.
 - Die App benötigt keine Installation und funktioniert offline.
-
-
-## License
-This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.
